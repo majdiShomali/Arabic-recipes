@@ -1,7 +1,21 @@
 *{
     margin: 0;
     padding: 0;
+  }
+
+a{
+  text-decoration: none;
 }
+
+body{
+    background-color: #F8F6F2;
+}
+
+button:hover{
+  border: 3px solid rgb(255, 255, 255);
+  cursor: pointer;
+   }
+   
 nav{
     background-color: #E8CC95;
     display: grid;
@@ -17,7 +31,8 @@ nav{
     align-items: center;
 }
 .logo img{
-    width: 30px;
+    width: 3rem;
+    margin-right: 0.5rem;
     border-radius: 50%;
     border: 1px solid black; 
 }
@@ -102,10 +117,10 @@ ul.NavLinks li{
  /* -----------hero---------------  */
 #hero{
    margin: 0 1rem;
-    background-size: auto; 
-    background: url("../Images/hero.jpg");
+    /* background-size: auto;  */
+    background: url("../Images/hero.jpg") ;
     border-radius: 5rem;
-    height: 20rem;
+    height: 25rem;
     border: 1px solid black;
 box-shadow: 1px 1px 0px 1px black;
     display: flex;
@@ -127,10 +142,10 @@ font-weight: bolder;
 }
 
 #hero button{
-    width: 10rem;
-    height: 3rem;
+    width: 15rem;
+    height: 5rem;
     border-radius: 1rem;
-    
+    font-size: larger;
     }
 
 
@@ -217,30 +232,16 @@ border-radius: 0.5rem;
 
 
 
+/* -----------footer----------- */
 .footerLinks{
+  padding: 2rem;
     display: grid;
-    grid-auto-rows: minmax(10rem,auto);
-    grid-template-areas: 
-    "box1 box1 box2 box3 box4"
-    ;
-    padding: 2rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 0.5rem;
 }
 
-.box1{
-    grid-area: box1;
-}
-.box2{
-    grid-area: box2;
-}
-.box3{
-    grid-area: box3;   
-}
-.box4{
-    grid-area: box4;  
-}
-.footerIcons{
-    display: flex;
-}
+
+
 
 .footerLinksOne{
     display: flex;
@@ -255,10 +256,10 @@ list-style-type: none;
 
 
 input.emailInput {
-    background: #8196aa;
-    border: 0;
+
+    border: 1px solid black;
     border-radius: 0.5rem;
-    color: white;
+    color: rgb(5, 5, 5);
     padding: 1rem 0.2rem;
     width: 100%;
   }
@@ -268,23 +269,23 @@ input.emailInput {
   }
   
   input.emailInput::placeholder {
-    color: white;
+    color: rgb(0, 0, 0);
   }
   
   button.emailButton {
-    background: #16bdae;
     border: 0;
-    border-radius: 0.1rem;
-    color: white;
-    width: 1rem;
-    height: 1rem;
+    background-size: auto; 
+    background: url("../Images/send.png");
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.4rem;
     position: absolute;
     right: 0rem;
-    top: 1rem;
+    top: 0.8rem;
   }
   
   button.emailButton:hover{
-    background: red;
+    border: 1px solid black;
   }
 
 
@@ -293,6 +294,63 @@ input.emailInput {
     display: inline-block;
     width: 60%;
   }
+
+
+  .footerIcons{
+    background: #E8CC95;
+    min-height: 3rem;
+    display: grid;
+   grid-template-columns: repeat(3,1fr);
+  }
+
+  .footerIcons .footerIconsLinks{
+    display: flex;
+    align-items: center;
+  }
+
+  .footerIcons .footerIconsLinks a{
+    margin: 0rem 0.5rem;
+  }
+
+  .footerIcons .footerIconsImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footerIcons .footerIconsImg img{
+    width: 2rem;
+    margin: 0rem 0.5rem;
+  }
+
+  .footerIconsCopyR{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+
+nav{
+  font-size: larger;  
+}
+footer{
+  font-size: larger;
+}
+input{
+  font-size: larger;
+}
+a{
+  font-size: larger;
+}
+h3{
+  font-size: larger; 
+}
+
+a:hover{
+  color: rgb(40, 89, 163);
+  }
+
+
+
 
   @media (max-width: 768px){
 
@@ -303,10 +361,14 @@ input.emailInput {
 
 
     .pt-site-nav__submit {
- 
     width: 100%;
       }
    
+      .pt-site-footer__submit {
+        width: 90%;
+          }
+
+          
     #buttonnav{    
         display: inline-block ;
         margin-right: 1rem ;
@@ -319,7 +381,39 @@ input.emailInput {
         
     }
 
+    .footerLinks{
 
+        padding: 0.5rem;
+    }
  
 
+
+*{
+  font-size: small;
+}
+
+a{
+  font-size: small; 
+}
+ 
+nav{
+  font-size: small;  
+}
+footer{
+  font-size: small;
+}
+input{
+  font-size: small;
+}
+a{
+  font-size: small;
+}
+h3{
+  font-size: small; 
+}
+
+.footerLinks{
+  display: grid;
+ grid-template-columns: repeat(2,1fr);
+}
   }
