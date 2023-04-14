@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: #E8CC95;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0.5rem;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 0px 1px black;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid black; 
+}
+nav p {    
+    margin: 0px 5px;   
+}
+
+input.SearchInput {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 1rem 0.2rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  input.SearchInput:focus {
+    outline: none;
+  }
+  
+  input.SearchInput::placeholder {
+    color: rgb(0, 0, 0);
+  }
+  
+  button.searchButton {
+    border: 0;
+    background-size: auto; 
+    background: url("../Images/search.png");
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.4rem;
+    position: absolute;
+    right: 1rem;
+    top: 0.8rem;
+  }
+  
+  button.searchButton:hover{
+    border: 1px solid black;
+  }
+
+
+  .pt-site-nav__submit {
+    position: relative;
+    display: flex;
+    justify-self: center; 
+    width: 60%;
+  }
+
+
+
+
+
+.ulDiv{
+    display: flex;
+   align-items: center;
+   justify-content: end;
+   padding-right: 1rem;
+    
+}
+
+ul.NavLinks li{
+    display: inline-block;
+  }
+
+  ul.NavLinks a{
+    margin: 0px 5px; 
+    display: flex;
+    justify-content: center;
+  }
+  #buttonnav{
+    display: none ;
+}
+
+
+
+#buttonnav:hover{  
+   
+   box-shadow: 1px 1px 0px rgb(0, 0, 0);
+   border-radius: 7px;
+     }
+
+
+ /* -----------hero---------------  */
+#hero{
+   margin: 0 1rem;
+    background-size: auto; 
+    background: url("../Images/hero.jpg");
+    border-radius: 5rem;
+    height: 20rem;
+    border: 1px solid black;
+box-shadow: 1px 1px 0px 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.country img{
+width: 5rem;
+}
+
+#hero p{
+color: aliceblue;
+font-size: 2rem;
+font-weight: bolder;
+
+}
+
+#hero button{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1rem;
+    
+    }
+
+
+  /* -----------card---------------  */
+
+.mealsContainer{
+    display: flex;
+    align-items: center;
+justify-content: center;
+}
+
+.mealsContainer button.swapButtons{
+   width: 3rem;
+   height: 3rem;
+   border-radius: 1.5rem;
+}
+
+.cardContainer{
+    display: flex;
+    align-items: center;
+    
+    
+    margin-top: 0.1rem;
+
+
+}
+.card{
+   width: 15rem;
+    border: 2px solid black;
+    margin: 1rem;
+}
+
+.card img{
+    width: 100%;
+    height: 8rem;
+    
+}
+
+.cardContent p{
+   text-align: center;
+}
+
+.cardMain1{
+    display: flex;   
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+.cardRating{
+    display: flex;
+
+}
+.cardRating img{
+    width: 1rem;
+    height: 1rem;
+}
+
+
+.cardMain2{
+display: flex;
+align-items: center;
+margin: 0.5rem 0;
+padding: 0.5rem;
+}
+
+.cardMain2 img{
+width: 2rem;
+height: 2rem;
+}
+
+.cardButtons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 2px solid black;
+    padding: 0.5rem;
+}
+
+.cardButtons button{
+padding: 0.25rem;
+border-radius: 0.5rem;
+}
+
+
+
+.footerLinks{
+    display: grid;
+    grid-auto-rows: minmax(10rem,auto);
+    grid-template-areas: 
+    "box1 box1 box2 box3 box4"
+    ;
+    padding: 2rem;
+}
+
+.box1{
+    grid-area: box1;
+}
+.box2{
+    grid-area: box2;
+}
+.box3{
+    grid-area: box3;   
+}
+.box4{
+    grid-area: box4;  
+}
+.footerIcons{
+    display: flex;
+}
+
+.footerLinksOne{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerQuickLinks{
+display: flex;
+flex-direction: column;
+list-style-type: none;
+}
+
+
+input.emailInput {
+    background: #8196aa;
+    border: 0;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem 0.2rem;
+    width: 100%;
+  }
+  
+  input.emailInput:focus {
+    outline: none;
+  }
+  
+  input.emailInput::placeholder {
+    color: white;
+  }
+  
+  button.emailButton {
+    background: #16bdae;
+    border: 0;
+    border-radius: 0.1rem;
+    color: white;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: 0rem;
+    top: 1rem;
+  }
+  
+  button.emailButton:hover{
+    background: red;
+  }
+
+
+  .pt-site-footer__submit {
+    position: relative;
+    display: inline-block;
+    width: 60%;
+  }
+
+  @media (max-width: 768px){
+
+
+    ul.NavLinks{
+      display: none;
+    }
+
+
+    .pt-site-nav__submit {
+ 
+    width: 100%;
+      }
+   
+    #buttonnav{    
+        display: inline-block ;
+        margin-right: 1rem ;
+        width: 2rem;
+    }
+
+    .ulDiv{
+
+       padding-right: 0.25rem;
+        
+    }
+
+
+ 
+
+  }
