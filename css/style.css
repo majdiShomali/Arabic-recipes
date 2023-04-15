@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
   }
-
 a{
   text-decoration: none;
 }
+
 
 body{
     background-color: #F8F6F2;
@@ -57,15 +57,14 @@ input.SearchInput {
   }
   
   button.searchButton {
-    border: 0;
-    background-size: auto; 
-    background: url("../Images/search.png");
+    border: none;
+    background-color: none;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 0.4rem;
     position: absolute;
     right: 1rem;
-    top: 0.8rem;
+    top: 1rem;
   }
   
   button.searchButton:hover{
@@ -122,7 +121,7 @@ ul.NavLinks li{
     border-radius: 5rem;
     height: 25rem;
     border: 1px solid black;
-box-shadow: 1px 1px 0px 1px black;
+    box-shadow: 1px 1px 0px 1px black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,7 +137,6 @@ width: 5rem;
 color: aliceblue;
 font-size: 2rem;
 font-weight: bolder;
-
 }
 
 #hero button{
@@ -157,7 +155,16 @@ font-weight: bolder;
 justify-content: center;
 }
 
+#mealsLeftButton{
+border:none ;
+}
+
+#mealsRightButton{
+  border:none ;
+}
+
 .mealsContainer button.swapButtons{
+  background: none;
    width: 3rem;
    height: 3rem;
    border-radius: 1.5rem;
@@ -166,12 +173,9 @@ justify-content: center;
 .cardContainer{
     display: flex;
     align-items: center;
-    
-    
     margin-top: 0.1rem;
-
-
 }
+
 .card{
    width: 15rem;
     border: 2px solid black;
@@ -273,15 +277,15 @@ input.emailInput {
   }
   
   button.emailButton {
-    border: 0;
-    background-size: auto; 
-    background: url("../Images/send.png");
+    border: none;
+    /* background-size: auto; 
+    background: url("../Images/send.png"); */
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 0.4rem;
     position: absolute;
     right: 0rem;
-    top: 0.8rem;
+    top: 1rem;
   }
   
   button.emailButton:hover{
@@ -318,8 +322,7 @@ input.emailInput {
     justify-content: center;
   }
 
-  .footerIcons .footerIconsImg img{
-    width: 2rem;
+  .footerIcons .footerIconsImg a{
     margin: 0rem 0.5rem;
   }
 
@@ -327,6 +330,10 @@ input.emailInput {
     display: flex;
     align-items: center;
     justify-content: center; 
+  }
+  .footerIconsCopyR h5{
+   text-align: center;
+   margin-top: 0.5rem;
   }
 
 nav{
@@ -349,7 +356,7 @@ a:hover{
   color: rgb(40, 89, 163);
   }
 
-
+ 
 
 
   @media (max-width: 768px){
