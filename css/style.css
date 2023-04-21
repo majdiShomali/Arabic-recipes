@@ -11,27 +11,33 @@ a{
   text-decoration: none;
 }
 
+
+
+
 /* -----------nav-----------   */
 nav{
-    background-color: #E8CC95;
+    background-color: #e8cc9500;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 0.5rem;
     align-items: center;
     padding: 0.3rem 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 1px 1px 0px 1px black;
+    position: sticky;
+    top: 0;
 }
+
 .logo{
     display: flex;
     align-items: center;
 }
+
 .logo img{
     width: 3rem;
     margin-right: 0.5rem;
     border-radius: 50%;
     border: 1px solid black; 
 }
+
 nav p {    
     margin: 0px 5px;   
 }
@@ -96,9 +102,10 @@ ul.NavLinks li{
     display: flex;
     justify-content: center;
   }
+
   #buttonnav{
     display: none ;
-}
+ }
 
 
 
@@ -110,19 +117,18 @@ ul.NavLinks li{
 
  /* -----------hero---------------  */
 #hero{
-   margin: 0 1rem;
-    /* background-size: auto;  */
-    background: url("../Images/hero.jpg") ;
-    border-radius: 5rem;
-    height: 25rem;
-    border: 1px solid black;
-    box-shadow: 1px 1px 0px 1px black;
+    background: url("../Images/hero44.jpg") ;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    
 }
-
+#hero .ggeasy{
+  width: 90%;
+ margin-top: 10rem;
+   
+}
 
 .country img{
 width: 5rem;
@@ -132,12 +138,13 @@ width: 5rem;
 color: aliceblue;
 font-size: 2rem;
 font-weight: bolder;
+margin-bottom: 1rem;
 }
 
 #hero button{
     width: 15rem;
     height: 5rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     font-size: larger;
     }
 
@@ -150,13 +157,11 @@ font-weight: bolder;
 justify-content: center;
 }
 
-#mealsLeftButton{
+.swapButtons{
 border:none ;
 }
 
-#mealsRightButton{
-  border:none ;
-}
+
 
 .mealsContainer button.swapButtons{
   background: none;
@@ -194,10 +199,11 @@ border:none ;
     margin: 0.5rem 0;
     padding: 0.5rem;
 }
+
 .cardRating{
     display: flex;
-
 }
+
 .cardRating svg{
 color: rgb(242, 208, 13);
 }
@@ -362,6 +368,12 @@ button:hover{
  }
  
 
+ .cardRating img{
+  width: 16px;
+  height: 16px;
+  }
+
+
  /* ---------------all media--------------- */
   @media (max-width: 768px){
 
@@ -428,3 +440,5 @@ h3{
  grid-template-columns: repeat(2,1fr);
 }
   }
+
+
