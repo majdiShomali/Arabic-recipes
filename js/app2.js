@@ -209,38 +209,18 @@ if((my_list.indexOf(item_name)) ==-1){
 
  add_to_my_list_f(i,item_list_.name, item_list_.img,class_name);
 
-
 }
 else{
   _listed_item_[i].style.background='blanchedalmond';
 
   let _listed_item__img=document.getElementsByClassName(class_name+'img');
   _listed_item__img[i].style.boxShadow="4px 4px 10px rgb(5, 7, 5)";
-
-
   _listed_item_[i].style.boxShadow="4px 4px 10px rgb(5, 7, 5)";
-
     p_[i].textContent='click to add';
-  
- 
-
- 
   deletenn(item_name);
  
-  
-
-
-
-  
-}
-
-
-}
-
-
-}
-
-}
+}}
+}}
 
 
 
@@ -250,10 +230,8 @@ function deletenn(name_of){
   my_list.splice(unselected_item,1);
   my_list_obj.splice(unselected_item,1);
 
- 
   localStorage.my_list=JSON.stringify(my_list);
   localStorage.my_list_obj=JSON.stringify(my_list_obj);
-
 
   let deleted_item=document.getElementsByClassName('my_list_class')
   let my_list_unselected_items=document.getElementsByClassName('my_list_container');
@@ -272,8 +250,6 @@ let add_to_my_list_f=function(i,name,img,_class){
  
     add_item_to_my_list.style.textAlign='left';
   
- 
-  
     add_item_to_my_list.addEventListener('click',function(){
    
     add_item_to_my_list.id=name;
@@ -287,20 +263,10 @@ let add_to_my_list_f=function(i,name,img,_class){
     _listed_item_[i].style.boxShadow="4px 4px 10px rgb(5, 7, 5)";
     let p_c=document.getElementsByClassName(_class+'p');
   
-  
 
        p_c[i].textContent='click to add';
     
-
-  
-        
-         deletenn(add_item_to_my_list.id);
-  
-      
-        
-      
-         
-        
+       deletenn(add_item_to_my_list.id);
   
   });
   add_item_to_my_list.dataset.target=`${name}`;
@@ -316,12 +282,7 @@ let add_to_my_list_f=function(i,name,img,_class){
   let pel=document.createElement("p");
   let pel_text;
   
-  
-    pel_text=document.createTextNode(" click to remove");
-  
-
-  
-  
+  pel_text=document.createTextNode(" click to remove");
   
   pel.appendChild(pel_text);
   my_list_icon.appendChild(pel);
@@ -329,3 +290,50 @@ let add_to_my_list_f=function(i,name,img,_class){
   my_list_container_el[0].appendChild(add_item_to_my_list);
   
   }
+
+
+  //------------------restore my list from local storage--------------------------//
+
+if(localStorage.my_list != null){
+
+  my_list=JSON.parse(localStorage.getItem('my_list'));
+  my_list_obj=JSON.parse(localStorage.getItem('my_list_obj'));
+  
+  let j;
+  for(let i=0;i<my_list.length;i++){
+  j=check_contain(i);
+  
+     
+    let _listed_item_l=document.getElementsByClassName(`${my_list_obj[i].type}`);
+  _listed_item_l[j].style.background='#1abc9c';
+  
+  let _listed_item__img=document.getElementsByClassName(`${my_list_obj[i].type}`+'img');
+  _listed_item__img[j].style.boxShadow="0px 0px 5px 1px rgb(5, 7, 5)";
+  
+  _listed_item_l[j].style.boxShadow="0px 0px 5px 1px rgb(5, 7, 5)";
+   let p_l=document.getElementsByClassName(`${my_list_obj[i].type}`+'p');
+
+    p_l[j].textContent='added to my list';
+
+
+
+  add_to_my_list_f(j,my_list_obj[i].name,my_list_obj[i].img,`${my_list_obj[i].type}`);
+  
+  }
+    
+  }
+
+
+  //-------------------------function check local storege------------------------------------//
+function check_contain(i){
+  let jj;
+  if(vegetables_name.indexOf(my_list[i])!=-1){
+    jj=vegetables_name.indexOf(my_list[i]);
+    }
+    else if(fruit_name.indexOf(my_list[i])!=-1){
+      jj=fruit_name.indexOf(my_list[i]);
+      }
+     
+
+return jj
+}

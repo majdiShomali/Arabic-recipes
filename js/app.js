@@ -6,7 +6,7 @@
         render0()
         function render(){
 
-          for(let i=0;i<1;i++){
+        for(let i=0;i<1;i++){
         let cards = document.getElementById("cards");
         cards.classList.add("cardContainer");
 

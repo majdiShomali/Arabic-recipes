@@ -1,0 +1,282 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #F8F6F2;
+}
+
+a{
+text-decoration: none;
+}
+
+
+/* -----------nav-----------   */
+nav{
+    background-color: #e8cc9500;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0.5rem;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    position: sticky;
+    top: 0;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 3rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid black; 
+}
+
+nav p {    
+    margin: 0px 5px;   
+}
+
+input.SearchInput {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.2rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  input.SearchInput:focus {
+    outline: none;
+  }
+  
+  input.SearchInput::placeholder {
+    color: rgb(0, 0, 0);
+  }
+  
+  button.searchButton {
+    border: none;
+    background-color: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.4rem;
+    position: absolute;
+    right: 1rem;
+    top: 0.7rem;
+  }
+  
+  button.searchButton:hover{
+    border: 1px solid black;
+  }
+
+
+  .pt-site-nav__submit {
+    position: relative;
+    display: flex;
+    justify-self: center; 
+    width: 60%;
+  }
+
+
+
+
+
+.ulDiv{
+    display: flex;
+   align-items: center;
+   justify-content: end;
+   padding-right: 1rem;
+    
+}
+
+ul.NavLinks li{
+    display: inline-block;
+  }
+
+  ul.NavLinks a{
+    margin: 0px 5px; 
+    display: flex;
+    justify-content: center;
+  }
+
+  #buttonnav{
+    display: none ;
+ }
+
+
+
+#buttonnav:hover{  
+   border-radius: 5px;
+   border: 2px solid black;
+     }
+
+
+
+     /* -----------footer----------- */
+.footerLinks{
+  padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 0.5rem;
+}
+
+
+
+
+.footerLinksOne{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerQuickLinks{
+display: flex;
+flex-direction: column;
+list-style-type: none;
+}
+
+
+input.emailInput {
+
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    color: rgb(5, 5, 5);
+    padding: 1rem 0.2rem;
+    width: 100%;
+  }
+  
+  input.emailInput:focus {
+    outline: none;
+  }
+  
+  input.emailInput::placeholder {
+    color: rgb(0, 0, 0);
+  }
+  
+  button.emailButton {
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.4rem;
+    position: absolute;
+    right: 0rem;
+    top: 1rem;
+  }
+  
+  button.emailButton:hover{
+    border: 1px solid black;
+  }
+
+
+  .pt-site-footer__submit {
+    position: relative;
+    display: inline-block;
+    width: 60%;
+  }
+
+
+  .footerIcons{
+    background: #E8CC95;
+    min-height: 3rem;
+    display: grid;
+   grid-template-columns: repeat(3,1fr);
+  }
+
+  .footerIcons .footerIconsLinks{
+    display: flex;
+    align-items: center;
+  }
+
+  .footerIcons .footerIconsLinks a{
+    margin: 0rem 0.5rem;
+  }
+
+  .footerIcons .footerIconsImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footerIcons .footerIconsImg a{
+    margin: 0rem 0.5rem;
+  }
+
+  .footerIconsCopyR{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  .footerIconsCopyR p{
+   text-align: center;
+   margin-top: 0.8rem;
+  }
+
+
+
+   /* ---------------all media--------------- */
+   @media (max-width: 768px){
+
+
+    ul.NavLinks{
+      display: none;
+    }
+
+
+    .pt-site-nav__submit {
+    width: 100%;
+      }
+   
+      .pt-site-footer__submit {
+        width: 90%;
+          }
+
+          
+    #buttonnav{    
+        display: inline-block ;
+        margin-right: 1rem ;
+        
+    }
+
+    .ulDiv{
+
+       padding-right: 0.25rem;
+        
+    }
+
+    .footerLinks{
+
+        padding: 0.5rem;
+    }
+ 
+
+
+*{
+  font-size: small;
+}
+
+a{
+  font-size: small; 
+}
+ 
+nav{
+  font-size: small;  
+}
+footer{
+  font-size: small;
+}
+input{
+  font-size: small;
+}
+a{
+  font-size: small;
+}
+h3{
+  font-size: small; 
+}
+
+.footerLinks{
+  display: grid;
+ grid-template-columns: repeat(2,1fr);
+}
+  }
