@@ -1,12 +1,9 @@
 let vegetables_name=['potato','onion','garlic','Broccoli','Cabbage','Bean','Arugula','Carrot','Cauliflower','Celery','Cherry Tomato','Common Beans','Cucumbers','Eggplant','Ginger','Lemon','Lettuce','Mulukhiyah','Mushrooms','Okra','Parsley','pea','radish','red pepper','Spinach','sweet pepper','tomato'];
 let fruit_name=['apple','Apricot', "Avocado", "Banana" ,"Blackberries" , "Blueberries" ,"Cherry", "Date Palm" ,"Grape", "Guava" , "Kiwi" ,"Lime", "Mango" ,"Melon" ,"Nectarines", "Olives" ,"Orange"  ,"Pear" , "Pineapple", "Pomegranate", "Pomelo", "Raspberry" ,"Strawberry" ,"watermelon"];
 
-
-
 //-------------------initialize array and object for my lsit ------------------------------//
 let my_list=[];
 let my_list_obj=[];
-
 
 //------------------------initialize vegetables name,type and image ------------------------------//
 
@@ -23,8 +20,6 @@ let my_list_obj=[];
   let vmore_ID_vegetables="vmorevegetables";
   showGrid_(vmore_ID_vegetables ,'vegetables_container');
 
-
-
 //-----------------------initialize fruit name,type and image -------------------------------//
 
 let fruit_img=[];
@@ -33,15 +28,11 @@ arraytoimage('Images/fruits/',fruit_name,fruit_img,fruit_type,'fruit');
 let fruit_obj=[];
 arraytoobject(fruit_name,fruit_img,fruit_type,fruit_obj,'fruit');
 addtocontainer(fruit_name,'ingredient_class',fruit_obj,'fruit_container',"fruits");  //---add fruit icons to fruit container--
-
 let fruit_listed_item_;
 let p_fruit;
 collectinfo(fruit_listed_item_,'fruits',fruit_name,'Images/fruits/');
-
 let vmore_ID_fruit="vmorefruits";
 showGrid_(vmore_ID_fruit ,'fruit_container');
-
-
 
 //------------------------function to make items' array for type and image--------------------------//
 
@@ -129,9 +120,7 @@ function addtocontainer(item_name,class_,item_obj,container,class0){
     else if(toggvbutton==false){
       let button_vmore=document.getElementById(vmore_ID_);
       button_vmore.innerHTML=": :";
-    
       let vcontainer=document.getElementsByClassName(items_container_);
-     
       vcontainer[0].style.display="flex";
       toggvbutton=true;
       button_vmore.style.boxShadow="5px 5px 5px 0 rgb(32, 8, 8)";
@@ -184,10 +173,6 @@ _listed_item_[i].style.boxShadow="0px 0px 5px 1px rgb(5, 7, 5)";
  
 
 p_[i].textContent='added to my list';
-
-
-
-
 
 
 let item_name = _listed_item_[i].getAttribute('data-target');

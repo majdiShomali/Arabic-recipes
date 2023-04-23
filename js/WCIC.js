@@ -53,17 +53,7 @@ let meals=[
 
 
 
-
-
-
-
-
-
-
-
-
-  
-  let cook=document.getElementsByClassName('cook_now_container');
+let cook=document.getElementsByClassName('cook_now_container');
 let cook2=document.getElementsByClassName('cook_now_container2');
 let cook3=document.getElementsByClassName('cook_now_container3');
 
@@ -83,8 +73,6 @@ let h_container3=document.getElementsByClassName('h_container3');
 
 //------------------------function to check meals and my list-------------------------------------//
 function checkIfAllExist(meal_c, my_list_c )  {
-
-    // console.log(meal_c.filter(h=> !my_list_c.includes(h)).length===0);
      return meal_c.filter(h=> !my_list_c.includes(h)).length===0;  }
    //------------------------------------------------------------------------------------------------//
   
@@ -277,7 +265,6 @@ addtocontainer(Ingr,'ingredient_class',my_list_obj,`cookNow_container${i})`,"mea
 
 
   function addtocontainer(item_name,class_,item_obj,container,class0,i){
-console.log(meals[i].ingr_obj.length)
     for(let j=0;j<meals[i].ingr_obj.length;j++){ 
       let _listed_item=document.createElement("div");
       _listed_item.classList.add(class_);
