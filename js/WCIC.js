@@ -29,7 +29,7 @@ let meals=[
       ],
       "link": [
         "https://www.youtube.com/embed/wtc1N5YIQu4",
-        "https://www.youtube.com/embed/SnHrzy2m_sM"
+        "https://www.youtube.com/embed/wqGhI48T9as"
       ],
       "ingr": [
         "onion",
@@ -248,8 +248,8 @@ ingDiv.classList.add(`cookNow_container${i})`) ;
   let viddiv=document.createElement('div');
   viddiv.classList.add('vid');
   let vidd=document.createElement('iframe');
-  vidd.style.width="560px";
-  vidd.style.height="315px"; 
+  vidd.style.width="25rem";
+  vidd.style.height="15rem"; 
   vidd.setAttribute('allowfullscreen','');
   vidd.src=link_i[i];
   vidd.title='YouTube video player';
