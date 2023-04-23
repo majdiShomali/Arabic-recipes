@@ -3,7 +3,9 @@
     margin: 0;
 }
       
-
+.video-list h3{
+    text-align: center;
+}
  /* -----------card---------------  */
  .showmore{
     width: auto;

@@ -51,6 +51,17 @@ let meals=[
     }
   ]
 
+
+
+
+
+
+
+
+
+
+
+
   
   let cook=document.getElementsByClassName('cook_now_container');
 let cook2=document.getElementsByClassName('cook_now_container2');
@@ -225,6 +236,8 @@ function video_maker(link_i,name_,info_,linkNName,Ingr,i){
       })
       vvva[0].appendChild(cancel_button);
   
+let k=i;
+
    for(let i=0;i<link_i.length;i++){
 
 let ingDiv=document.createElement('div');
@@ -255,9 +268,7 @@ ingDiv.classList.add(`cookNow_container${i})`) ;
   vvv[0].appendChild(viddiv);
 
 
-  
-
-addtocontainer(Ingr,'ingredient_class',my_list_obj,`cookNow_container${i})`,"meals");  //---add fruit icons to fruit container--
+addtocontainer(Ingr,'ingredient_class',my_list_obj,`cookNow_container${i})`,"meals",k);  //---add fruit icons to fruit container--
 
    }
 
@@ -265,28 +276,28 @@ addtocontainer(Ingr,'ingredient_class',my_list_obj,`cookNow_container${i})`,"mea
 
 
 
-  function addtocontainer(item_name,class_,item_obj,container,class0){
-
-    for(let i=0;i<item_name.length;i++){   
+  function addtocontainer(item_name,class_,item_obj,container,class0,i){
+console.log(meals[i].ingr_obj.length)
+    for(let j=0;j<meals[i].ingr_obj.length;j++){ 
       let _listed_item=document.createElement("div");
       _listed_item.classList.add(class_);
       _listed_item.classList.add(class0);    
-      _listed_item.id=item_name[i];
-      _listed_item.dataset.target=`${item_obj[i].name}`;
+      _listed_item.id=meals[i].ingr_obj[j].name;
+      _listed_item.dataset.target=`${meals[i].ingr_obj[j].name}`;
       let img1=document.createElement('img');
       img1.classList.add(`${class0}img`);
-      img1.src=item_obj[i].img
+      img1.src=`Images/${meals[i].ingr_obj[j].type}/${meals[i].ingr_obj[j].img}`
       _listed_item.appendChild(img1);
       let _icon=document.createElement("div");
       _listed_item.appendChild(_icon);
       let h4el=document.createElement("h4");
-      let h4el_text=document.createTextNode(item_obj[i].name);
+      let h4el_text=document.createTextNode(meals[i].ingr_obj[j].name);
       h4el.appendChild(h4el_text);
       _icon.appendChild(h4el);
       let _container_el =document.getElementsByClassName(container);
       _container_el[0].appendChild(_listed_item);
     
     
-      }
+      } 
     
     }
