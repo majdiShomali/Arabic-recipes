@@ -110,9 +110,58 @@ a{
       .my_list_container{
         background-color: #F8F6F2;
         border: 1px solid rgb(15, 1, 1);
-        display: flex;
-        overflow-x :auto ;
+        display: grid;
+        grid-auto-rows: minmax(5rem,5rem);
+        grid-template-columns: repeat(5,1fr);
+        gap: 1rem;
         padding: 20px 5px;
         cursor: pointer;
-        margin-bottom: 1rem;
+        }
+
+
+        @media (max-width: 900px) {
+
+          .vegetables_container{
+           
+          
+            padding: 10px 1px;
+           
+            margin-bottom: 0.5rem;
+            }
+
+            .my_list_container{
+              grid-auto-rows: minmax(5rem,5rem);
+              grid-template-columns: repeat(3,1fr);
+              gap: 1rem;
+              margin-bottom: 1rem;
+              }
+     
+
+            .ingredient_class{
+              margin: 0rem 0.2rem;
+              padding: 0.2rem;
+              height: 5rem;
+              }
+              
+              
+              .ingredient_class img{
+                  max-width: 3rem;
+                  max-height: 3rem;
+                  margin-right: 10px;
+                  }
+              
+                  .ingredient_class h4{
+                 font-size: 15px;          
+                  } 
+              
+                  .ingredient_classp{
+                      margin-Top: 0px ;
+                      text-align: start;
+                  }
+                  .ingredient_class{
+                    margin: 0rem 0.2rem;
+                    padding: 0.2rem;
+                    }
+
+
         }

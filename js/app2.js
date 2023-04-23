@@ -4,7 +4,7 @@ let fruit_name=['apple','Apricot', "Avocado", "Banana" ,"Blackberries" , "Bluebe
 //-------------------initialize array and object for my lsit ------------------------------//
 let my_list=[];
 let my_list_obj=[];
-
+ width = JSON.parse(localStorage.getItem("width"))
 //------------------------initialize vegetables name,type and image ------------------------------//
 
   let vegetables_img=[];
@@ -109,8 +109,15 @@ function addtocontainer(item_name,class_,item_obj,container,class0){
       button_vmore.innerHTML="..";
     let vcontainer=document.getElementsByClassName(items_container_);
     vcontainer[0].style.display="grid";
-    vcontainer[0].style.gridAutoRows="minmax(5rem,5rem)";
-    vcontainer[0].style.gridTemplateColumns="repeat(5,1fr)";
+    
+    if(width > 600){
+      vcontainer[0].style.gridAutoRows="minmax(5rem,5rem)";
+      vcontainer[0].style.gridTemplateColumns="repeat(5,1fr)";
+    } else {
+      vcontainer[0].style.gridAutoRows="minmax(5rem,5rem)";
+      vcontainer[0].style.gridTemplateColumns="repeat(2,1fr)";
+    }
+    
     vcontainer[0].style.gridGap="1rem";
     toggvbutton=false;
     button_vmore.style.boxShadow="0px 0px 5px 0 rgb(32, 8, 8)";

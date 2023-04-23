@@ -19,6 +19,7 @@ let width = body.offsetWidth;
       if(newWidth != width){
         width = newWidth;
         console.log(width);
+        localStorage.setItem("width",JSON.stringify(width));
        }
        if(width>=768){
           navLinksUlDiv.appendChild(navLinksUl);
