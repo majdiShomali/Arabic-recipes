@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+      
+
+ /* -----------card---------------  */
+ .showmore{
+    width: auto;
+    display: flex;
+    align-items: start;
+ 
+    }
+ 
+    .showmore .listname{
+    background-color: #E8CC95;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-top-right-radius: 0.7rem;
+    border-top-left-radius: 0.7rem;
+    }
+              
+    .vmore{
+     width: 2rem;
+     height: 2rem;
+    padding: 0.3rem;
+    margin-left: 0.5rem;
+     }
+.cook_now_box{
+background-color: #F8F6F2;
+border: 1px solid rgb(15, 1, 1);
+display: flex;
+overflow-x :auto ;
+padding: 20px 5px;
+cursor: pointer;
+margin-bottom: 1rem;
+}
+
+.swapButtons{
+border:none ;
+}
+
+
+
+.mealsContainer button.swapButtons{
+  background: none;
+   width: 3rem;
+   height: 3rem;
+   border-radius: 1.5rem;
+}
+
+.cardContainer{
+    display: flex;
+    align-items: center;
+    margin-top: 0.1rem;
+}
+
+.card{
+   width: 15rem;
+    border: 2px solid black;
+    margin: 0.5rem;
+}
+
+.card img{
+    width: 100%;
+    height: 8rem;
+    
+}
+
+.cardContent p{
+   text-align: center;
+   padding: 0;
+}
+
+.cardMain1{
+    display: flex;   
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.2rem 0;
+    padding: 0.2rem;
+}
+
+.cardRating{
+    display: flex;
+}
+
+.cardRating svg{
+color: rgb(242, 208, 13);
+}
+
+
+.cardMain2{
+display: flex;
+align-items: center;
+margin: 0.2rem 0;
+padding: 0.2rem;
+}
+
+.cardMain2 img{
+width: 2rem;
+height: 2rem;
+}
+
+.cardButtons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 2px solid black;
+    padding: 0.2rem;
+}
+
+.cardButtons button{
+padding: 0.25rem;
+border-radius: 0.5rem;
+}
+
+.cardRating img{
+    width: 16px;
+    height: 16px;
+    }
+
+
+    .cook_now_videos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    
+    .vid{
+    border: 1px solid rgb(15, 1, 1); 
+    margin-bottom: 1rem;
+    }
+
+    .cookNow_container{
+        background-color: #F8F6F2;
+        /* border: 1px solid rgb(15, 1, 1); */
+        display: flex;
+        overflow-x :auto ;
+        padding: 20px 5px;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        }
+
+
+
+        .ingredient_class{
+          background-color: blanchedalmond;
+          display: flex;
+          align-items: center;
+          border: 1px solid black;
+          margin: 0rem 0.5rem;
+          padding: 0.2rem;
+          box-shadow: 2px 2px 0px 1px black;
+          border-radius: 0.5rem;
+          height: 5rem;
+          }
+          
+          
+          .ingredient_class img{
+              max-width: 5rem;
+              max-height: 5rem;
+              margin-right: 20px;
+              border-radius: 40%;
+              border: 1px solid #ddd;
+              padding: 3px;
+              background-color: rgb(255, 255, 255);
+              box-shadow: 5px 5px 10px rgba(5, 2, 7, 0.623);
+              }
+          
+              .ingredient_class h4{
+             text-transform: capitalize;
+             font-size: 22px;
+             /* border-bottom: 1px dashed #333; */
+             margin-bottom: 5px;
+             text-align: start;
+             
+              } 
+          
+              .ingredient_classp{
+                  margin-Top: 0px ;
+                  text-align: start;
+              }
+              .ingredient_class{
+                background-color: blanchedalmond;
+                display: flex;
+                align-items: center;
+                border: 1px solid black;
+                margin: 0rem 0.5rem;
+                padding: 0.2rem;
+                box-shadow: 2px 2px 0px 1px black;
+                border-radius: 0.5rem;
+                }
