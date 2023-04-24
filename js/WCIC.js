@@ -32,19 +32,41 @@ let meals=[
         "https://www.youtube.com/embed/wqGhI48T9as"
       ],
       "ingr": [
-        "onion",
+        "apple",
         "garlic"
       ],
       "category": "cook_now_container",
       "ingr_obj": [
         {
-          "name": "onion",
-          "img": "onion.png",
-          "type": "vegetables"
+          "name": "apple",
+          "img": "apple.png",
+          "type": "fruits"
         },
         {
           "name": "garlic",
           "img": "garlic.png",
+          "type": "vegetables"
+        },
+        {
+          "name": "potato",
+          "img": "potato.png",
+          "type": "vegetables"
+        },
+        {
+          "name": "onion",
+          "img": "onion.png",
+          "type": "vegetables"
+        }
+        ,
+        {
+          "name": "Broccoli",
+          "img": "Broccoli.png",
+          "type": "vegetables"
+        }
+        ,
+        {
+          "name": "Arugula",
+          "img": "Arugula.png",
           "type": "vegetables"
         }
       ]
@@ -194,8 +216,12 @@ function video_maker(link_i,name_,info_,linkNName,Ingr,i){
     vvva[0].style.display="block";
     while(vvva[0].hasChildNodes()){
       vvva[0].removeChild(vvva[0].firstChild);   }
-  
+      let cancel_buttonDiv=document.createElement('div');
+      cancel_buttonDiv.classList.add('cancel_buttonDiv');
+
       let cancel_button=document.createElement('button');
+      cancel_buttonDiv.appendChild(cancel_button);
+
       cancel_button.id="video_list_cancel";
       cancel_button.classList.add('cancel_button');
       cancel_button.innerHTML="x";
@@ -222,7 +248,7 @@ function video_maker(link_i,name_,info_,linkNName,Ingr,i){
           vvv[0].removeChild(vvv[0].firstChild);   }
   
       })
-      vvva[0].appendChild(cancel_button);
+      vvva[0].appendChild(cancel_buttonDiv);
   
 let k=i;
 

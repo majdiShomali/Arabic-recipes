@@ -14,7 +14,7 @@ text-decoration: none;
 
 /* -----------nav-----------   */
 nav{
-    background-color: #e8cc9500;
+    background-color: #F8F6F2;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 0.5rem;

@@ -2,10 +2,21 @@
     padding: 0;
     margin: 0;
 }
-      
-.video-list h3{
-    text-align: center;
+.cancel_buttonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
+.cancel_buttonDiv .cancel_button{
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    background-color: red;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: larger;
+}   
+
  /* -----------card---------------  */
  .showmore{
     width: auto;
@@ -132,7 +143,6 @@ border-radius: 0.5rem;
     }
     
     .vid{
-    border: 1px solid rgb(15, 1, 1); 
     margin-bottom: 1rem;
     }
 
@@ -144,6 +154,7 @@ border-radius: 0.5rem;
         padding: 20px 5px;
         cursor: pointer;
         margin-bottom: 1rem;
+        width: 25rem;
         }
 
 
@@ -157,7 +168,7 @@ border-radius: 0.5rem;
           padding: 0.1rem;
           box-shadow: 2px 2px 0px 1px black;
           border-radius: 0.5rem;
-          height: 5rem;
+          height: 4rem;
           }
           
           
@@ -186,3 +197,12 @@ border-radius: 0.5rem;
                   text-align: start;
               }
        
+              .video-list {
+               border: 1px solid rgb(15, 1, 1); 
+               padding: 1rem;
+               margin-bottom:0.5rem ;
+            
+            }
+              .video-list h3{
+                  text-align: center;
+              }

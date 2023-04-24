@@ -138,16 +138,14 @@ border-radius: 0.5rem;
 
 
   /* ---------------all font--------------- */
-nav{
-  font-size: larger;  
-}
+
 footer{
   font-size: larger;
 }
 input{
   font-size: larger;
 }
-a{
+#hero a{
   font-size: larger;
 }
 h3{
