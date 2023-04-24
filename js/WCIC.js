@@ -1,80 +1,83 @@
-let meals=[
-    {
-      "name": "meal1",
-      "img": "meal1.png",
-      "linkname": [
-        "majdi"
-      ],
-      "link": [
-        "https://www.youtube.com/embed/9ajeqj7H5VE"
-      ],
-      "ingr": [
-        "potato"
-      ],
-      "category": "cook_now_container",
-      "ingr_obj": [
-        {
-          "name": "potato",
-          "img": "potato.png",
-          "type": "vegetables"
-        }
-      ]
-    },
-    {
-      "name": "meal2",
-      "img": "meal2.png",
-      "linkname": [
-        "iron",
-        "steel"
-      ],
-      "link": [
-        "https://www.youtube.com/embed/wtc1N5YIQu4",
-        "https://www.youtube.com/embed/wqGhI48T9as"
-      ],
-      "ingr": [
-        "apple",
-        "garlic"
-      ],
-      "category": "cook_now_container",
-      "ingr_obj": [
-        {
-          "name": "apple",
-          "img": "apple.png",
-          "type": "fruits"
-        },
-        {
-          "name": "garlic",
-          "img": "garlic.png",
-          "type": "vegetables"
-        },
-        {
-          "name": "potato",
-          "img": "potato.png",
-          "type": "vegetables"
-        },
-        {
-          "name": "onion",
-          "img": "onion.png",
-          "type": "vegetables"
-        }
-        ,
-        {
-          "name": "Broccoli",
-          "img": "Broccoli.png",
-          "type": "vegetables"
-        }
-        ,
-        {
-          "name": "Arugula",
-          "img": "Arugula.png",
-          "type": "vegetables"
-        }
-      ]
-    }
-  ]
+// let meals=[
+//     {
+//       "name": "meal1",
+//       "img": "meal1.png",
+//       "linkname": [
+//         "majdi"
+//       ],
+//       "link": [
+//         "https://www.youtube.com/embed/9ajeqj7H5VE"
+//       ],
+//       "ingr": [
+//         "potato"
+//       ],
+//       "category": "cook_now_container",
+//       "ingr_obj": [
+//         {
+//           "name": "potato",
+//           "img": "potato.png",
+//           "type": "vegetables"
+//         }
+//       ]
+//     },
+//     {
+//       "name": "meal2",
+//       "img": "meal2.png",
+//       "linkname": [
+//         "iron",
+//         "steel"
+//       ],
+//       "link": [
+//         "https://www.youtube.com/embed/wtc1N5YIQu4",
+//         "https://www.youtube.com/embed/wqGhI48T9as"
+//       ],
+//       "ingr": [
+//         "apple",
+//         "garlic"
+//       ],
+//       "category": "cook_now_container",
+//       "ingr_obj": [
+//         {
+//           "name": "apple",
+//           "img": "apple.png",
+//           "type": "fruits"
+//         },
+//         {
+//           "name": "garlic",
+//           "img": "garlic.png",
+//           "type": "vegetables"
+//         },
+//         {
+//           "name": "potato",
+//           "img": "potato.png",
+//           "type": "vegetables"
+//         },
+//         {
+//           "name": "onion",
+//           "img": "onion.png",
+//           "type": "vegetables"
+//         }
+//         ,
+//         {
+//           "name": "Broccoli",
+//           "img": "Broccoli.png",
+//           "type": "vegetables"
+//         }
+//         ,
+//         {
+//           "name": "Arugula",
+//           "img": "Arugula.png",
+//           "type": "vegetables"
+//         }
+//       ]
+//     }
+//   ]
 
-
-
+let meals=[]
+if(localStorage.all_meals != null){
+  meals=JSON.parse(localStorage.getItem('all_meals'));
+  
+  }
 let cook=document.getElementsByClassName('cook_now_container');
 let cook2=document.getElementsByClassName('cook_now_container2');
 let cook3=document.getElementsByClassName('cook_now_container3');
@@ -314,3 +317,4 @@ addtocontainer(Ingr,'ingredient_class',my_list_obj,`cookNow_container${i})`,"mea
       } 
     
     }
+

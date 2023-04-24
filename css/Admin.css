@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f8f6f2;
+  color: black;
+  font-family: system-ui;
+  box-sizing: border-box;
+  padding: 2%;
+  overflow-x: hidden;
+}
+
+#usermajor {
+  width: 25%;
+  height: 2rem;
+  margin: 1rem;
+}
+
+/* ----------------------------------------------- */
+
+h1 {
+  background-color: rgba(150, 155, 155, 0);
+  margin: 0px 20px;
+  border-radius: 10px;
+}
+
+.all_items_container {
+  background-color: rgb(236, 236, 236);
+  border: 1px solid rgb(15, 1, 1);
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 5px;
+}
+
+.all_items_class {
+  border: 1px solid rgb(15, 1, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 20px;
+  padding: 50px 20px;
+  background-color: blanchedalmond;
+  border-radius: 5%;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgb(5, 7, 5);
+  height: 10px;
+  min-width: 250px;
+  text-align: right;
+}
+
+.all_items_class img {
+  width: 120px;
+  height: 80px;
+  margin-right: 20px;
+  border-radius: 40%;
+  border: 1px solid #ddd;
+  padding: 3px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 10px rgba(5, 2, 7, 0.623);
+}
+
+.all_items_class h4 {
+  text-transform: capitalize;
+  font-size: 22px;
+  border-bottom: 1px dashed #333;
+  margin-bottom: 5px;
+}
+
+.all_items_classp {
+  margin-top: 0px;
+}
+/* --------------list-------------------------------- */
+
+.my_list_container {
+  background-color: rgb(236, 236, 236);
+  border: 1px solid rgb(15, 1, 1);
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 5px;
+}
+
+.my_list_class {
+  border: 1px solid rgb(15, 1, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 20px;
+  padding: 50px 20px;
+
+  background-color: rgb(128, 128, 128);
+  border-radius: 5%;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgb(5, 7, 5);
+  height: 10px;
+  min-width: 250px;
+  text-align: right;
+}
+
+.my_list_class img {
+  width: 120px;
+  height: 80px;
+  margin-right: 20px;
+  border-radius: 40%;
+  border: 1px solid #ddd;
+  padding: 3px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 10px rgba(5, 2, 7, 0.623);
+}
+
+.my_list_class h4 {
+  text-transform: capitalize;
+  font-size: 22px;
+  border-bottom: 1px dashed #333;
+  margin-bottom: 5px;
+}
+
+/* ----------------------------------------- */
+
+.showmore {
+  width: auto;
+  display: flex;
+  align-items: start;
+}
+
+.showmore .listname {
+  background-color: #e8cc95;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-top-right-radius: 0.7rem;
+  border-top-left-radius: 0.7rem;
+}
+
+.vmore {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.3rem;
+  margin-left: 0.5rem;
+}
+/* --------------------------------------------------- */
+.crud {
+  width: 80%;
+  margin: auto;
+}
+
+.head {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: 1px solid black;
+  background: #e2d6bc;
+  margin: 4px 0;
+  border-radius: 4px;
+  padding: 4px;
+  color: #fff;
+}
+
+input:focus {
+  /* background: #000; */
+  transform: scale(1.01);
+}
+
+.price input {
+  width: 20%;
+}
+
+#total {
+  background: red;
+  padding: 4px 2px;
+  border-radius: 4px;
+}
+
+#total::before {
+  content: "total";
+}
+
+button {
+  width: 100%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background: #e8bd67;
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: #f8f6f2;
+  letter-spacing: 1px;
+}
+
+.btnsearch {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnsearch button {
+  width: 45%;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+table th {
+  text-transform: uppercase;
+}
+th,
+td {
+  padding: 5px;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #140202;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #f0eded;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #0a0303;
+}
+
+.master1 {
+  visibility: visible;
+}
+.search99 {
+  text-align: left;
+  padding: 5px;
+  /* background-color:#34495e;  */
+  border: 1px solid black;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link_div_submit {
+  display: flex;
+  align-items: center;
+}
+
+.links_input00 {
+  max-width: 10rem;
+  margin-right: 0.5rem;
+}
+.links_input001 {
+  max-width: 10rem;
+  margin-right: 0.5rem;
+}
+
+.cook_now_videos {
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cook_now_videos .video-list {
+  background: #3834343f;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.cook_now_videos .video-list .vid {
+  background: #333;
+  margin: 10px;
+  margin-bottom: 1rem;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 1);
+}
+
+.cook_now_videos .video-list .vid iframe {
+  border: 2px solid black;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 1);
+}
+
+.cancel_button {
+  margin-left: 90%;
+  margin-top: 10px;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  font-size: xx-large;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px 0 rgb(32, 8, 8);
+}
