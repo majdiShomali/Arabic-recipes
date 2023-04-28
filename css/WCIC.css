@@ -15,6 +15,7 @@
     border-radius: 0.5rem;
     cursor: pointer;
     font-size: larger;
+    margin-bottom: 1rem;
 }   
 
  /* -----------card---------------  */
@@ -48,6 +49,7 @@ overflow-x :auto ;
 padding: 20px 5px;
 cursor: pointer;
 margin-bottom: 1rem;
+min-height: 10rem;
 }
 
 .swapButtons{
@@ -144,10 +146,15 @@ border-radius: 0.5rem;
     
     .vid{
     margin-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 0px 2px #636362;
     }
+    .vid iframe{
+     border-radius: 1rem;     
+   }
 
     .cookNow_container{
-        background-color: #F8F6F2;
+        background-color: #FAF1DF;
         /* border: 1px solid rgb(15, 1, 1); */
         display: flex;
         overflow-x :auto ;
@@ -198,11 +205,12 @@ border-radius: 0.5rem;
               }
        
               .video-list {
-               border: 1px solid rgb(15, 1, 1); 
+               /* border: 1px solid rgb(15, 1, 1);  */
                padding: 1rem;
                margin-bottom:0.5rem ;
             
             }
               .video-list h3{
                   text-align: center;
+                  margin-bottom: 1rem;
               }

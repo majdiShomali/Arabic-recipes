@@ -117,6 +117,7 @@ ul.NavLinks li{
 
      /* -----------footer----------- */
 .footerLinks{
+  background: #F8F6F2;
   padding: 2rem;
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -178,7 +179,7 @@ input.emailInput {
 
 
   .footerIcons{
-    background: #E8CC95;
+    background-color:#E8CC95;
     min-height: 3rem;
     display: grid;
    grid-template-columns: repeat(3,1fr);
