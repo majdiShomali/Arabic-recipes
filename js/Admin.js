@@ -391,7 +391,7 @@
           my_list.push(item_name);
           let item_list_ = {
             name: item_name,
-            img: `images/All/${item_name + ".png"}`,
+            img: `${path00}${item_name + ".png"}`,
             type: _type_,
           };
 
@@ -558,7 +558,7 @@
 
   //---------------------------search-------------------------------------------------//
   /*An array containing all the  names in the world:*/
-  var search1 = all_items_name; //vegetables_name.concat(fruit_name,seasoning_name);
+  let search1 = all_items_name; //vegetables_name.concat(fruit_name,seasoning_name);
   /*initiate the autocomplete function on the "myInput" element, and pass along the  array as possible autocomplete values:*/
   autocomplete(document.getElementById("myInput"), search1);
   let search12 = document.getElementById("myInput");
@@ -619,7 +619,7 @@
       my_list.push(item_name1);
       let item_list_ = {
         name: item_name1,
-        img: `${item_name1 + ".png"}`,
+        img: `${path00}${item_name1 + ".png"}`,
         type: _type_,
       };
 
@@ -631,7 +631,7 @@
         item_list_.img,
         item_list_.type,
         class_name,
-        path0
+        
               );
     } else {
     }
@@ -1133,7 +1133,7 @@
       add_to_my_list_f(
         jj,
         array_obj_mealsAR[i].ingr[k],
-        `images/All/${array_obj_mealsAR[i].ingr[k] + ".png"}`,
+        `${path00}${array_obj_mealsEN[i].ingr[k] + ".png"}`,
         array_obj_mealsAR[i].ingr_obj[k].type,
         "all_items_class"
       );

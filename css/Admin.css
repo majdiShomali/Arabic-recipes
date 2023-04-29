@@ -5,11 +5,10 @@
 
 body {
   background: #f8f6f2;
-  color: black;
   font-family: system-ui;
   box-sizing: border-box;
-  padding: 2%;
   overflow-x: hidden;
+  padding: 0 1rem;
 }
 
 #usermajor {
@@ -21,7 +20,6 @@ body {
 /* ----------------------------------------------- */
 
 h1 {
-  background-color: rgba(150, 155, 155, 0);
   margin: 0px 20px;
   border-radius: 10px;
 }
@@ -162,7 +160,7 @@ input {
   margin: 4px 0;
   border-radius: 4px;
   padding: 4px;
-  color: #fff;
+  color: #000000;
 }
 
 input:focus {
@@ -225,9 +223,11 @@ td {
 .autocomplete {
   position: relative;
   display: inline-block;
+  color: rgb(5, 5, 5);
 }
 
 .autocomplete-items {
+  background-color: red;
   position: absolute;
   border: 1px solid #d4d4d4;
   border-bottom: none;
@@ -242,7 +242,7 @@ td {
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
-  background-color: #140202;
+  background-color: #e2d6bc;
   border-bottom: 1px solid #d4d4d4;
 }
 
@@ -254,7 +254,7 @@ td {
 /*when navigating through the items using the arrow keys:*/
 .autocomplete-active {
   background-color: DodgerBlue !important;
-  color: #0a0303;
+  color: #f1f1f1;
 }
 
 .master1 {
