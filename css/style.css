@@ -62,8 +62,8 @@ width: 5rem;
     }
  
     .showmore .listname{
-    background-color: #f0ebe3;;
-    display: flex;
+      background-color: #E8CC95;
+      display: flex;
     align-items: center;
     padding: 0.5rem;
     border-top-right-radius: 0.7rem;
@@ -83,24 +83,14 @@ width: 5rem;
 justify-content: center;
 }
 
-.swapButtons{
-border:none ;
-}
-
-
-
-.mealsContainer button.swapButtons{
-  background: none;
-   width: 3rem;
-   height: 3rem;
-   border-radius: 1.5rem;
-}
 
 .cardContainer{
     display: flex;
     overflow-x: scroll;
      width: 80%;
     margin-bottom: 1rem;
+    border: 1px solid black;
+
 }
 
 .card{

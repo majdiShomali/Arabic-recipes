@@ -43,7 +43,6 @@ while(cook[0].hasChildNodes()){
      //----------click on meal to create a video list----------------//
 
   let cook_now_container_el =document.getElementsByClassName(meals[i].category);
-
 cook_now_container_el[0].innerHTML+=`
       <div class="${"card"}">
           <img src="${"Images/card.jpg"}" alt="">
@@ -69,7 +68,7 @@ cook_now_container_el[0].innerHTML+=`
           </div>
           
           <div class="cardButtons">
-          <button id="${"ShowRecipe"}${i}" onClick="ShowRecipeButton(${i},${"ShowRecipe"}${i}) ">Show recipe"</button>
+          <button id="${"ShowRecipe"}${i}" onClick="ShowRecipeButton(${i},${"ShowRecipe"}${i}) ">Show recipe</button>
           </div>
           
           </div> `
@@ -77,9 +76,6 @@ cook_now_container_el[0].innerHTML+=`
 //-------------------------------------------------------------
 
 
-
-
-//---------------------------//
   } 
 
 }
@@ -131,7 +127,6 @@ function video_maker(link_i,name_,info_,linkNName,Ingr,i){
        for(let i=0;i<vmore.length;i++){
         vmore[i].style.display="flex";
       }
-
        cook[0].style.display="flex";
        cook2[0].style.display="flex";
        cook3[0].style.display="flex";
@@ -139,7 +134,6 @@ function video_maker(link_i,name_,info_,linkNName,Ingr,i){
         let vvv=document.getElementsByClassName('video-list');
         while(vvv[0].hasChildNodes()){
           vvv[0].removeChild(vvv[0].firstChild);   }
-  
       })
       vvva[0].appendChild(cancel_buttonDiv);
   
@@ -151,33 +145,26 @@ let ingDiv=document.createElement('div');
 ingDiv.classList.add('cookNow_container');
 ingDiv.classList.add(`cookNow_container${i})`) ;
 
-
-  let viddiv=document.createElement('div');
-  viddiv.classList.add('vid');
-  let vidd=document.createElement('iframe');
-  vidd.style.width="25rem";
-  vidd.style.height="15rem"; 
-  vidd.setAttribute('allowfullscreen','');
-  vidd.src=link_i[i];
-  vidd.title='YouTube video player';
-  let vvv=document.getElementsByClassName('video-list');
+  let videoDiv=document.createElement('div');
+  videoDiv.classList.add('vid');
+  let videoIframe=document.createElement('iframe');
+  videoIframe.style.width="25rem";
+  videoIframe.style.height="15rem"; 
+  videoIframe.setAttribute('allowfullscreen','');
+  videoIframe.src=link_i[i];
+  videoIframe.title='YouTube video player';
+  let videosList=document.getElementsByClassName('video-list');
   let h3_ch_n=document.createElement('h3');
-  
-  
   h3_ch_n.innerHTML=linkNName[i];
   h3_ch_n.style.color="#1abc9c";
-  
   h3_ch_n.classList.add('titlev');
-
-  viddiv.appendChild(h3_ch_n);
-  viddiv.appendChild(ingDiv);
-  viddiv.appendChild(vidd);
-  vvv[0].appendChild(viddiv);
-
+  videoDiv.append(h3_ch_n,ingDiv,videoIframe);
+  videosList[0].appendChild(videoDiv);
 
 addtocontainer(Ingr,'ingredient_class',my_list_obj,`cookNow_container${i})`,"meals",k);  //---add fruit icons to fruit container--
+  
 
-   }
+}
 
   }
 
@@ -193,11 +180,60 @@ addtocontainer(Ingr,'ingredient_class',my_list_obj,`cookNow_container${i})`,"mea
           <div >
           <h4>${meals[i].ingr_obj[j].name}</h4>
           </div> 
-
           </div> `
-
-    
       } 
     
     }
 
+
+    let vmore_ID_meals="vmoreMeals";
+    showGrid_(vmore_ID_meals,'cook_now_container');
+
+    let vmore_ID_Drinks="vmoreDrinks";
+    showGrid_(vmore_ID_Drinks,'cook_now_container2');
+
+    let vmore_ID_Sweets="vmoreSweets";
+    showGrid_(vmore_ID_Sweets,'cook_now_container3');
+
+
+
+//-----------------------button show grid------------------//
+function showGrid_(vmore_ID_ ,items_container_){
+  let toggvbutton=true;
+  let button_vmore=document.getElementById(vmore_ID_);
+  button_vmore.addEventListener('click',function(){
+  if(toggvbutton==true){
+    let button_vmore=document.getElementById(vmore_ID_);
+    button_vmore.innerHTML="..";
+  let vcontainer=document.getElementsByClassName(items_container_);
+  vcontainer[0].style.display="grid";
+  
+  if(width > 600){
+    vcontainer[0].style.gridAutoRows="minmax(5rem,21rem)";
+    vcontainer[0].style.gridTemplateColumns="repeat(5,1fr)";
+  } else {
+    vcontainer[0].style.gridAutoRows="minmax(5rem,21rem)";
+    vcontainer[0].style.gridTemplateColumns="repeat(2,1fr)";
+  }
+  
+  vcontainer[0].style.gridGap="1rem";
+  toggvbutton=false;
+  button_vmore.style.boxShadow="0px 0px 5px 0 rgb(32, 8, 8)";
+  
+  }
+  
+  else if(toggvbutton==false){
+    let button_vmore=document.getElementById(vmore_ID_);
+    button_vmore.innerHTML=": :";
+    let vcontainer=document.getElementsByClassName(items_container_);
+    vcontainer[0].style.display="flex";
+    toggvbutton=true;
+    button_vmore.style.boxShadow="2px 2px 1px 0 rgb(32, 8, 8)";
+  
+  }
+  
+  
+  })
+  
+  
+  }

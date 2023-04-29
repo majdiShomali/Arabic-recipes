@@ -42,45 +42,29 @@
     margin-left: 0.5rem;
      }
 .cook_now_box{
-background-color: #F8F6F2;
-border: 1px solid rgb(15, 1, 1);
-display: flex;
-overflow-x :auto ;
-padding: 20px 5px;
-cursor: pointer;
-margin-bottom: 1rem;
-min-height: 10rem;
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 1rem;
 }
 
-.swapButtons{
-border:none ;
-}
-
-
-
-.mealsContainer button.swapButtons{
-  background: none;
-   width: 3rem;
-   height: 3rem;
-   border-radius: 1.5rem;
-}
 
 .cardContainer{
     display: flex;
-    align-items: center;
-    margin-top: 0.1rem;
+    overflow-x: scroll;
+     width: 80%;
+    margin-bottom: 1rem;
 }
 
 .card{
-   width: 15rem;
+    min-width: 15rem;
     border: 2px solid black;
-    margin: 0.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
 }
 
 .card img{
     width: 100%;
     height: 8rem;
-    
 }
 
 .cardContent p{
@@ -92,8 +76,8 @@ border:none ;
     display: flex;   
     align-items: center;
     justify-content: space-between;
-    margin: 0.2rem 0;
-    padding: 0.2rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
 }
 
 .cardRating{
@@ -106,10 +90,10 @@ color: rgb(242, 208, 13);
 
 
 .cardMain2{
-display: flex;
-align-items: center;
-margin: 0.2rem 0;
-padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
 }
 
 .cardMain2 img{

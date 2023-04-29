@@ -65,7 +65,7 @@ input.SearchInput {
     border-radius: 0.4rem;
     position: absolute;
     right: 1rem;
-    top: 0.7rem;
+    top: 0.4rem;
   }
   
   button.searchButton:hover{
