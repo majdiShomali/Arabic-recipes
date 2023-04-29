@@ -1,9 +1,14 @@
+ 
+ @import url("https://fonts.googleapis.com/css?family=Londrina+Solid");
+
 *{
     margin: 0;
     padding: 0;
   }
+  
 
 body{
+    font-family: "Poppins", sans-serif;
     background-color: #F8F6F2;
 }
 
@@ -18,9 +23,18 @@ a{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;  
 }
+
+#hero h2{
+font-size: 2.5rem;
+}
+#hero h4{
+  font-size: 1rem;
+  font-weight:lighter;
+
+  }
+
 #hero .hero_content{
   width: 80%;
  margin-top: 5rem; 
@@ -30,12 +44,6 @@ a{
 width: 5rem;
 }
 
-#hero p{
-color: aliceblue;
-font-size: 2rem;
-font-weight: bolder;
-margin-bottom: 1rem;
-}
 
 #hero button{
     width: 15rem;
@@ -163,7 +171,7 @@ border-radius: 0.5rem;
 
   /* ---------------all font--------------- */
 
-footer{
+/* footer{
   font-size: larger;
 }
 input{
@@ -174,7 +182,7 @@ input{
 }
 h3{
   font-size: larger; 
-}
+} */
 
 
 

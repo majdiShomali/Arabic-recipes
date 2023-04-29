@@ -7,7 +7,7 @@ width = JSON.parse(localStorage.getItem("width"))
         render0()
         function render(){
 
-        for(let i=0;i<4;i++){
+        for(let i=0;i<7;i++){
         let cards = document.getElementById("cardsMeals");
         cards.classList.add("cardContainer");
 
@@ -36,7 +36,7 @@ width = JSON.parse(localStorage.getItem("width"))
             </div>
             
             <div class="cardButtons">
-            <button>Show recipe"</button>
+            <button>Show recipe</button>
             </div>
             
             </div> `
@@ -78,7 +78,7 @@ width = JSON.parse(localStorage.getItem("width"))
     </div>
     
     <div class="cardButtons">
-    <button>Show recipe"</button>
+    <button>Show recipe</button>
     </div>
     
     </div> `
