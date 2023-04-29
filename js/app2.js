@@ -70,30 +70,19 @@ function arraytoimage(fruit_name0,item_name,item_img,item_type,type){
 function addtocontainer(item_name,class_,item_obj,container,class0){
 
     for(let i=0;i<item_name.length;i++){   
-      let _listed_item=document.createElement("div");
-      _listed_item.classList.add(class_);
-      _listed_item.classList.add(class0);    
-      _listed_item.id=item_name[i];
-      _listed_item.dataset.target=`${item_obj[i].name}`;
-      let img1=document.createElement('img');
-      img1.classList.add(`${class0}img`);
-      img1.src=item_obj[i].img
-      _listed_item.appendChild(img1);
-      let _icon=document.createElement("div");
-      _listed_item.appendChild(_icon);
-      let h4el=document.createElement("h4");
-      let h4el_text=document.createTextNode(item_obj[i].name);
-      h4el.appendChild(h4el_text);
-      _icon.appendChild(h4el);
-      let pel=document.createElement("p");
-      pel.classList.add(class0+'p');
-      let pel_text= document.createTextNode('Click to add');
 
-      pel.appendChild(pel_text);
-      _icon.appendChild(pel);
-      let _container_el =document.getElementsByClassName(container);
-      _container_el[0].appendChild(_listed_item);
-    
+
+   let _container_el =document.getElementsByClassName(container);
+      _container_el[0].innerHTML+=
+ 
+ 
+       `<div id="${item_name[i]}" class="${class_}  ${class0}" data-target="${item_obj[i].name}">
+       <img class="${class0}img" src="${item_obj[i].img}">      
+       <div>
+       <h4>${item_obj[i].name}</h4>
+       <p class="${class0}p">Click to add</p>
+       </div>
+       </div>`  
     
       }
     
