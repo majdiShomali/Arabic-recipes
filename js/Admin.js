@@ -2,103 +2,8 @@
   let my_object_m = [];
   let all_mealsAR = meals55;
   let path00="images/All/"
-  // let meals55 = [
-  //   {
-  //     name: "aa",
-  //     img: "aa.png",
-  //     linkname: ["a"],
-  //     link: ["https://www.youtube.com/embed/w847J61wAcI"],
-  //     ingr: ["بطاطة"],
-  //     category: "cook_now_container",
-  //     ingr_obj: [
-  //       {
-  //         name: "بطاطة",
-  //         img: "بطاطة.png",
-  //         type: "خضراوات",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     name: "bb",
-  //     img: "bb.png",
-  //     linkname: ["b"],
-  //     link: ["https://www.youtube.com/embed/pk53LeUYJAg"],
-  //     ingr: ["بصل"],
-  //     category: "cook_now_container2",
-  //     ingr_obj: [
-  //       {
-  //         name: "بصل",
-  //         img: "بصل.png",
-  //         type: "خضراوات",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     name: "cc",
-  //     img: "cc.png",
-  //     linkname: ["c"],
-  //     link: ["https://www.youtube.com/embed/7xIbnwKzRGw"],
-  //     ingr: ["ثوم"],
-  //     category: "cook_now_container3",
-  //     ingr_obj: [
-  //       {
-  //         name: "ثوم",
-  //         img: "ثوم.png",
-  //         type: "خضراوات",
-  //       },
-  //     ],
-  //   },
-  // ];
+  let lang_
 
-  // let my_object_m = [
-  //   {
-  //     name: "aa",
-  //     img: "aa.png",
-  //     linkname: ["a"],
-  //     link: ["https://www.youtube.com/embed/w847J61wAcI"],
-  //     ingr: ["potato"],
-  //     category: "cook_now_container",
-  //     ingr_obj: [
-  //       {
-  //         name: "potato",
-  //         img: "potato.png",
-  //         type: "vegetables",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     name: "bb",
-  //     img: "bb.png",
-  //     linkname: ["b"],
-  //     link: ["https://www.youtube.com/embed/pk53LeUYJAg"],
-  //     ingr: ["onion"],
-  //     category: "cook_now_container2",
-  //     ingr_obj: [
-  //       {
-  //         name: "onion",
-  //         img: "onion.png",
-  //         type: "vegetables",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     name: "cc",
-  //     img: "cc.png",
-  //     linkname: ["c"],
-  //     link: ["https://www.youtube.com/embed/7xIbnwKzRGw"],
-  //     ingr: ["garlic"],
-  //     category: "cook_now_container3",
-  //     ingr_obj: [
-  //       {
-  //         name: "garlic",
-  //         img: "garlic.png",
-  //         type: "vegetables",
-  //       },
-  //     ],
-  //   },
-  // ];
-
-  // all_mealsAR = meals55;
   if (
     localStorage.all_mealsAR == null ||
     localStorage.all_mealsAR == "[]" ||
@@ -109,30 +14,29 @@
   }
 
   //--------------------change--language-------------//
-
-  var _lang_ = "AR";
+  let _lang_ = "AR";
 
   let tem;
   let st = "create";
   if (_lang_ == "EN") {
     // localStorage._lang_=JSON.stringify(_lang_);
-    var lang_ = "en";
+     lang_ = "en";
   } else if (_lang_ == "AR") {
     //localStorage._lang_=JSON.stringify(_lang_);
-    var lang_ = "ar";
+     lang_ = "ar";
   }
 
   //-------------------initialize array and object for my lsit ------------------------------//
 
-  var my_list = [];
-  var my_list_obj = [];
+  let my_list = [];
+  let my_list_obj = [];
 
-  var my_listAR = [];
-  var my_list_objAR = [];
+  let my_listAR = [];
+  let my_list_objAR = [];
 
-  var my_listEN = [];
-  var my_list_objEN = [];
-  var vegetables_nameAR = [
+  let my_listEN = [];
+  let my_list_objEN = [];
+  let vegetables_nameAR = [
     "بطاطة",
     "بصل",
     "ثوم",
@@ -161,7 +65,7 @@
     "فلفل حلو",
     "طماطم",
   ];
-  var vegetables_nameEN = [
+  let vegetables_nameEN = [
     "potato",
     "onion",
     "garlic",
@@ -192,7 +96,7 @@
   ];
   //------------------------------------------------------------------------------------------------//
 
-  var fruit_nameEN = [
+  let fruit_nameEN = [
     "apple",
     "Apricot",
     "Avocado",
@@ -218,7 +122,7 @@
     "Strawberry",
     "watermelon",
   ];
-  var fruit_nameAR = [
+  let fruit_nameAR = [
     "تفاح",
     "خوخ",
     "افاجادو",
@@ -245,19 +149,19 @@
     "بطيخ",
   ];
 
-  var seasoning_nameEN = ["salt"];
-  var seasoning_nameAR = ["ملح"];
-
+  let seasoning_nameEN = ["salt"];
+  let seasoning_nameAR = ["ملح"];
+  let all_items_name
   //------------------------initialize all_items name,type and image ------------------------------//
-  var all_items_nameEN = vegetables_nameEN.concat(fruit_nameEN, seasoning_nameEN);
+  let all_items_nameEN = vegetables_nameEN.concat(fruit_nameEN, seasoning_nameEN);
 
   if (lang_ == "en") {
-    var all_items_name = vegetables_nameEN.concat(fruit_nameEN, seasoning_nameEN);
+     all_items_name = vegetables_nameEN.concat(fruit_nameEN, seasoning_nameEN);
   } else if (lang_ == "ar") {
-    var all_items_name = vegetables_nameAR.concat(fruit_nameAR, seasoning_nameAR);
+     all_items_name = vegetables_nameAR.concat(fruit_nameAR, seasoning_nameAR);
   }
-  var all_items_img = [];
-  var all_items_type = [];
+  let all_items_img = [];
+  let all_items_type = [];
   arraytoimage(
     all_items_name,
     all_items_img,
@@ -265,7 +169,7 @@
     "all_items",
     "images/All/"
   );
-  var all_items_obj = [];
+  let all_items_obj = [];
   arraytoobject(
     all_items_name,
     all_items_img,
@@ -444,7 +348,7 @@
 
   //-----------------------button show grid------------------//
   function showGrid_(vmore_ID_, items_container_) {
-    var toggvbutton = true;
+    let toggvbutton = true;
     let button_vmore = document.getElementById(vmore_ID_);
     button_vmore.addEventListener("click", function () {
       if (toggvbutton == true) {
@@ -648,10 +552,10 @@
   function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
       the text field element and an array of possible autocompleted values:*/
-    var currentFocus;
+    let currentFocus;
     /*execute a function when someone writes in the text field:*/
     inp.addEventListener("input", function (e) {
-      var a,
+      let a,
         b,
         i,
         val = this.value;
@@ -692,18 +596,18 @@
     });
     /*execute a function presses a key on the keyboard:*/
     inp.addEventListener("keydown", function (e) {
-      var x = document.getElementById(this.id + "autocomplete-list");
+      let x = document.getElementById(this.id + "autocomplete-list");
       if (x) x = x.getElementsByTagName("div");
       if (e.keyCode == 40) {
         /*If the arrow DOWN key is pressed,
-            increase the currentFocus variable:*/
+            increase the currentFocus letiable:*/
         currentFocus++;
         /*and and make the current item more visible:*/
         addActive(x);
       } else if (e.keyCode == 38) {
         //up
         /*If the arrow UP key is pressed,
-            decrease the currentFocus variable:*/
+            decrease the currentFocus letiable:*/
         currentFocus--;
         /*and and make the current item more visible:*/
         addActive(x);
@@ -728,15 +632,15 @@
     }
     function removeActive(x) {
       /*a function to remove the "active" class from all autocomplete items:*/
-      for (var i = 0; i < x.length; i++) {
+      for (let i = 0; i < x.length; i++) {
         x[i].classList.remove("autocomplete-active");
       }
     }
     function closeAllLists(elmnt) {
       /*close all autocomplete lists in the document,
         except the one passed as an argument:*/
-      var x = document.getElementsByClassName("autocomplete-items");
-      for (var i = 0; i < x.length; i++) {
+      let x = document.getElementsByClassName("autocomplete-items");
+      for (let i = 0; i < x.length; i++) {
         if (elmnt != x[i] && elmnt != inp) {
           x[i].parentNode.removeChild(x[i]);
         }
@@ -746,7 +650,7 @@
     document.addEventListener("click", function (e) {
       closeAllLists(e.target);
       //console.log(e.target.textContent);
-      var searched_item = e.target.textContent;
+      let searched_item = e.target.textContent;
       //let search123=document.getElementById("myInput");
       //search123.value=searched_item;
       let sear__ = document.getElementById("myInput");
@@ -776,18 +680,18 @@
     });
   }
 
-  var array_obj_meals;
-  var array_obj_mealsAR = [];
+  let array_obj_meals;
+  let array_obj_mealsAR = [];
   if (localStorage.all_meals != null) {
     array_obj_meals = JSON.parse(localStorage.all_meals);
   } else {
-    var array_obj_meals = [];
+    let array_obj_meals = [];
   }
 
   if (localStorage.all_mealsAR != null) {
     array_obj_mealsAR = JSON.parse(localStorage.all_mealsAR);
   } else {
-    var array_obj_mealsAR = [];
+    let array_obj_mealsAR = [];
   }
 
   let name_link001 = document.getElementById("name_link0");
@@ -869,7 +773,8 @@
 
     let link_f;
     let name_f;
-
+    let _type0_
+    let _type0_AR
     // if (st=="create"){
     //    link_f=link_0.filter((str)=> str !=="");
     //    name_f=name_0.filter((str)=> str !=="");
@@ -890,17 +795,17 @@
         my_listEN[i] = all_items_nameEN[j];
 
         if (j < vegetables_nameEN.length) {
-          var _type0_ = "vegetables";
-          var _type0_AR = "خضراوات";
+           _type0_ = "vegetables";
+           _type0_AR = "خضراوات";
         } else if (j < vegetables_nameEN.length + fruit_nameEN.length) {
-          var _type0_ = "fruits";
-          var _type0_AR = "فواكه";
+           _type0_ = "fruits";
+           _type0_AR = "فواكه";
         } else if (
           j <
           vegetables_nameEN.length + fruit_nameEN.length + seasoning_nameEN.length
         ) {
-          var _type0_ = "seasoning";
-          var _type0_AR = "بهارات";
+           _type0_ = "seasoning";
+           _type0_AR = "بهارات";
         }
         let item_listEN_ = {
           name: my_listEN[i],
@@ -919,7 +824,7 @@
         my_list_obj.push(item_listAR_);
       }
 
-      var meal = {
+      let meal = {
         name: meal_input_name.value.toLowerCase(),
         img: meal_input_name.value.toLowerCase() + ".png",
         linkname: name_f,
@@ -938,7 +843,7 @@
       localStorage.setItem("all_meals", JSON.stringify(array_obj_meals));
     }
 
-    var mealar = {
+    let mealar = {
       name: meal_input_name.value,
       img: meal_input_name.value + ".png",
       linkname: name_f,
@@ -1133,7 +1038,7 @@
       add_to_my_list_f(
         jj,
         array_obj_mealsAR[i].ingr[k],
-        `${path00}${array_obj_mealsEN[i].ingr[k] + ".png"}`,
+        `${path00}${array_obj_mealsAR[i].ingr[k] + ".png"}`,
         array_obj_mealsAR[i].ingr_obj[k].type,
         "all_items_class"
       );
@@ -1249,6 +1154,18 @@
     table556.style.display = "none";
   }
 
+
+  function cancelButtonOnclick(){
+    table556.style.display = "block";
+      div_video_2[0].style.display = "none";
+
+      let vvv = document.getElementsByClassName("video-list");
+      while (vvv[0].hasChildNodes()) {
+        vvv[0].removeChild(vvv[0].firstChild);
+      }
+  }
+
+
   //---------------function to creat video list-----------//
   function video_maker(link_i, name_, info_, linkNName, Ingr) {
     let vvva = document.getElementsByClassName("video-list");
@@ -1257,53 +1174,37 @@
       vvva[0].removeChild(vvva[0].firstChild);
     }
 
-    let cancel_button = document.createElement("button");
-    cancel_button.id = "video_list_cancel";
-    cancel_button.classList.add("cancel_button");
-    cancel_button.innerHTML = "x";
 
-    cancel_button.addEventListener("click", function () {
-      table556.style.display = "block";
-      div_video_2[0].style.display = "none";
+   
+    vvva[0].innerHTML+=
+  `<button onClick="cancelButtonOnclick()" id="video_list_cancel" class="cancel_button" >x</button>`;
+    
 
-      let vvv = document.getElementsByClassName("video-list");
-      while (vvv[0].hasChildNodes()) {
-        vvv[0].removeChild(vvv[0].firstChild);
-      }
-    });
-    vvva[0].appendChild(cancel_button);
 
+ let lang_h4
+  let vvv = document.getElementsByClassName("video-list")[0];
     for (let i = 0; i < link_i.length; i++) {
-      let h3_ingn = document.createElement("h4");
-      h3_ingn.style.margin = "10px";
-
-      let viddiv = document.createElement("div");
-      viddiv.classList.add("vid");
-      let vidd = document.createElement("iframe");
-      vidd.style.width = "560px";
-      vidd.style.height = "315px";
-      vidd.setAttribute("allowfullscreen", "");
-      vidd.src = link_i[i];
-      vidd.title = "YouTube video player";
-      let vvv = document.getElementsByClassName("video-list");
-      let h3_ch_n = document.createElement("h3");
-
-      h3_ch_n.innerHTML = linkNName[i];
-      h3_ch_n.style.color = "#1abc9c";
-
-      h3_ch_n.classList.add("titlev");
 
       if (lang_ == "en") {
-        h3_ingn.innerHTML = `ingredents.. ${Ingr.join(" ,  ")}`;
-        h3_ingn.style.color = "#1abc9c";
+        lang_h4 = `ingredents.. ${Ingr.join(" ,  ")}`;
       } else if (lang_ == "ar") {
-        h3_ingn.innerHTML = ` المكونات ... ${Ingr.join(" ,  ")} `;
-        h3_ingn.style.color = "#1abc9c";
+        lang_h4= ` المكونات ... ${Ingr.join(" ,  ")} `;
       }
 
-      viddiv.appendChild(h3_ch_n);
-      viddiv.appendChild(h3_ingn);
-      viddiv.appendChild(vidd);
-      vvv[0].appendChild(viddiv);
+      
+
+      vvv.innerHTML+=
+`
+<div class="vid">
+<h4 style="margin:10px; color:#1abc9c;"> ingredents.. ${lang_h4} </h4>
+<h3 class="titlev">${linkNName[i]}</h3>
+<iframe src="${link_i[i]}" style="height:315px ;width:560px;" title="YouTube video player" allowfullscreen ></iframe>
+
+
+</div>
+
+`;
+
+ 
     }
   }

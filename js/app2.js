@@ -217,60 +217,51 @@ function deletenn(name_of){
   let deleted_item=document.getElementsByClassName('my_list_class')
   let my_list_unselected_items=document.getElementsByClassName('my_list_container');
   
+
   my_list_unselected_items[0].removeChild(deleted_item[unselected_item]);
   
 }
 
 //----------------------------creat icon -function- to my list-----------------------------------//
+function ClickOnMyList(i,name,_class){
+ 
+  let add_item_to_my_list_id=name;
+  
+  let _listed_item_=document.getElementsByClassName(_class);
+ 
+  _listed_item_[i].style.background='blanchedalmond';
+
+  let _listed_item__img=document.getElementsByClassName(_class+'img');
+ 
+  _listed_item__img[i].style.boxShadow="4px 4px 10px rgb(5, 7, 5)";
+
+  _listed_item_[i].style.boxShadow="4px 4px 10px rgb(5, 7, 5)";
+  let p_c=document.getElementsByClassName(_class+'p');
+
+
+     p_c[i].textContent='click to add';
+  
+     deletenn(add_item_to_my_list_id);
+
+}
 
 let add_to_my_list_f=function(i,name,img,_class){
   
-  let add_item_to_my_list=document.createElement("div");
-    add_item_to_my_list.classList.add('ingredient_class');
-    add_item_to_my_list.classList.add('my_list_class');
- 
-    add_item_to_my_list.style.textAlign='left';
-  
-    add_item_to_my_list.addEventListener('click',function(){
-   
-    add_item_to_my_list.id=name;
-    let _listed_item_=document.getElementsByClassName(_class);
-   
-    _listed_item_[i].style.background='blanchedalmond';
-  
-    let _listed_item__img=document.getElementsByClassName(_class+'img');
-    _listed_item__img[i].style.boxShadow="4px 4px 10px rgb(5, 7, 5)";
-  
-    _listed_item_[i].style.boxShadow="4px 4px 10px rgb(5, 7, 5)";
-    let p_c=document.getElementsByClassName(_class+'p');
-  
-
-       p_c[i].textContent='click to add';
-    
-       deletenn(add_item_to_my_list.id);
-  
-  });
-  add_item_to_my_list.dataset.target=`${name}`;
-  let img1=document.createElement('img');
-  img1.src=img;
-  add_item_to_my_list.appendChild(img1);
-  let my_list_icon=document.createElement("div");
-  add_item_to_my_list.appendChild(my_list_icon);
-  let h4el=document.createElement("h4");
-  let h4el_text=document.createTextNode(name);
-  h4el.appendChild(h4el_text);
-  my_list_icon.appendChild(h4el);
-  let pel=document.createElement("p");
-  let pel_text;
-  
-  pel_text=document.createTextNode(" click to remove");
-  
-  pel.appendChild(pel_text);
-  my_list_icon.appendChild(pel);
+let name0 =name
   let my_list_container_el =document.getElementsByClassName("my_list_container");
-  my_list_container_el[0].appendChild(add_item_to_my_list);
-  
-  }
+  my_list_container_el[0].innerHTML +=
+ 
+  `<div  onClick="ClickOnMyList(${i},'${name}','${_class}')" data-target="${name}" style="text-align: left;" class="ingredient_class my_list_class ${_class}">
+<img src="${img}">
+<div>
+<h4>${name}</h4>
+<p>click to remove</p>
+</div>
+
+  </div>`;
+
+
+   }
 
 
   //------------------restore my list from local storage--------------------------//

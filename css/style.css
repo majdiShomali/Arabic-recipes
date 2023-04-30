@@ -200,7 +200,6 @@ button:hover{
 
 
   #hero{
-    background: url("../Images/hero44min.png") ;
     height: 60vh;
 }
 #hero .hero_content{
@@ -210,3 +209,11 @@ button:hover{
 }
 
 
+@media (max-width: 500px) {
+
+  #hero{
+    background: url("../Images/hero44min.png") ;
+    height: 60vh;
+}
+
+}

@@ -117,7 +117,7 @@ ul.NavLinks li{
 
      /* -----------footer----------- */
 .footerLinks{
-  background: #F8F6F2;
+  background: #e8cc957b;
   padding: 2rem;
     display: grid;
     grid-template-columns: repeat(4,1fr);

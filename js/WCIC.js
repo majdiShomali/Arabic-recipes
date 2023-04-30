@@ -68,7 +68,7 @@ cook_now_container_el[0].innerHTML+=`
           </div>
           
           <div class="cardButtons">
-          <button id="${"ShowRecipe"}${i}" onClick="ShowRecipeButton(${i},${"ShowRecipe"}${i}) ">Show recipe</button>
+          <button id="${"ShowRecipe"}${i}" onClick="ShowRecipeButton(${i}) ">Show recipe</button>
           </div>
           
           </div> `
@@ -80,7 +80,7 @@ cook_now_container_el[0].innerHTML+=`
 
 }
 
-function ShowRecipeButton(i,id0){
+function ShowRecipeButton(i){
 
       cook[0].style.display="none";
       cook2[0].style.display="none";
