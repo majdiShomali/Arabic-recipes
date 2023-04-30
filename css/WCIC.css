@@ -45,6 +45,7 @@
     display: flex;
     overflow-x: scroll;
     margin-bottom: 1rem;
+    border: 1px solid black;
 }
 
 
@@ -53,6 +54,7 @@
     overflow-x: scroll;
      width: 80%;
     margin-bottom: 1rem;
+    
 }
 
 .card{
